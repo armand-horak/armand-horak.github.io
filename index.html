@@ -1,12 +1,44 @@
-<!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    hi...
+    <form class="contact-form" action="contactform.php" method="POST">
+        <input type="hidden" name="subject" value="CCSO Solar - Contact Form" />
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-12 col-md-6">
+                <label for="fc_firstName">First Name</label><span class="required">*</span>
+                <input id="fc_firstName" name="firstName" type="text" class="form-control" placeholder="John" required>
+            </div>
+            <div class="col-12 col-md-6">
+                <label for="fc_lastName">Last Name</label><span class="required">*</span>
+                <input id="fc_lastName" name="lastName" type="text" class="form-control" placeholder="Doe" required>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-12 col-md-6">
+                <label for="fc_mail">Email Address</label><span class="required">*</span>
+                <input id="fc_mail" name="mail" type="text" class="form-control" placeholder="john.doe@example.com" required>
+            </div>
+            <div class="col-12 col-md-6">
+                <label for="fc_phone">Phone Number</label><span class="required">*</span>
+                <input id="fc_phone" name="phone" type="text" class="form-control" placeholder="012345678" required>
+            </div>
+        </div>
+        <div class="form-group" style="margin-bottom: 20px;">
+            <label for="frm-txt">Message</label><span class="required">*</span>
+            <textarea name="message" placeholder="Message" class="form-control" id="frm-txt" rows="3" required></textarea>
+        </div>
+        <div id="sendmail-wrapper">
+            <button id="btn-sendmail" class="btn btn-lg btn-primary" type="submit" name="submit">SEND</button>
+        </div>
+    </form>
 </body>
+
 </html>
